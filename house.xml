@@ -1,0 +1,21 @@
+<house>
+	<guyshouseinfo>
+		<kome>
+			<fullname>Kome Michael</fullname>
+			<age>21</age>
+			<projects>
+				<learnXml>LAtely I have been learning XML</learnXml>
+				<learnANgular>I learned how to use the Angular framework</learnANgular>
+			</projects>
+			<favoriteColor>Neon Green</favoriteColor>
+		</kome>
+
+		<kome>
+			<hobby> Playing the guiter and soccer</hobby>
+			<roomates>
+				<rm1>JEremy</rm1>
+				<rm2>ALex</rm2>
+			</roomates>
+		</kome>
+	</guyshouseinfo>
+</house>

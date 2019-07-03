@@ -1,0 +1,78 @@
+<site>
+	<home>
+		I am home
+	</home>
+
+	<about>
+		<headerAbout>About</headerAbout>
+		<paragraph>
+			Hello, This is Kome's Website designed for the silverstone house. This website is a project by kome in learning different aspects of website design and development as a summer project. The website includes use of PHP, HTML, CSS, JavaScript and database querries with SQL. Further development of the website will include use of Angular and ASP but for now, I am content with what I have. About the website specifically, It shows information about the people I live with with and information on what has been going on with our house. Ya know, keeping you up to date with stuff.
+
+			We would encourage you to take a tour of the website, view our gallery and take a look at the events going on at he house. Also, for those of you connected with IVCf, we have an IVCF section in the side navigation where you can go and check out what events our house is hosting , the days and time of the events.
+
+			It's been a pleasure working on this website building it from scratch with raw HTML code and lots of learning and research. It's definitely made me learn a lot more of web development than what I used. Example server processing, configuring databases and processing databases. Also a bit of MVC Model-View-Controller type if web applications. Even though Jquerry and Boot strap are used in this Website, I learned way more than these in website design. Hope you enjoy using the website :)
+		</paragraph>
+	</about>
+
+	<bookings>
+		<book>
+			<name>Kome Michael</name>
+			<email>komemichael@gmail.com</email>
+			<phone>2045570148</phone>
+		</book>
+	</bookings>
+
+	<newsfeed>
+		<news>
+			<show>
+				<title>Summer Ending</title>
+				<paragraph> 
+					Alas, The summer is coming to a close. Everyone is back excet for Hans. Kome was home through out the summer, Has is still in MAuritaus, Jeremy Smith went to China for five weeks and Jeremy Dyck wasat camp. Lots of stuff happenning. Alex was also at camp for all of the summer. Now he is back for a while. Hopefully e will all be together soon. Cant wait.
+				</paragraph>
+				<author>Kome Michael</author>
+			</show>
+		</news>
+		<news>
+			<show>
+				<title>Fall semester</title>
+				<paragraph> 
+					So this fall we are going to see our friends again, at least most of them and I am excited for the fall. I will be updating the website regularly. And by updating, I mean improving on it's functionality. I hope to learn uch more in the coming semesters to interface hardware to what this website can recieve show and transmit. Fall is going to be exciting. At least that is what I think now.
+				</paragraph>
+			<author>Kome Michael</author>
+			</show>
+		</news>
+	</newsfeed>
+
+	<kome>
+		<avatar>images/kome.jpg</avatar>
+		<Quote>"I like the word awesome because it describes me."-kome</Quote>
+		<projects>
+			<project>
+				<project_title>Web development</project_title>
+				<project_details>
+					I have learnt different languages for making websites including the classic html and php. I also in the process of making this site, learned some styling technologies including the classic css, bootstrap(not used much in this website) and w3.css also I later got into styling effect with animate.css.
+
+					Also, I have used different front end and back end scripting frameworks to inplement this site and also different data processing technologies like SQL using MSQL and XML. Through these data technologies I have learnt a lot about networking without having taken my networking course in my degree. I have learned how to communicate with servers and client devices and the protocols being used to initiate and maintain these connections.
+
+					Like I said, I learned some scripting languages as well which include javascript for front end processing, jquery for UI and w3.js for effects. With Javascript I have learned and imlemented navigating the DOM, collect XML amd database data though http and AJAX, used JSON to implement configuraion files for the site and general scripting.
+
+					I also implemented PHP for server side processing. This involves uses from login system, ie fetching data from databases to form processin for data collection and storage. I also use PHP for maintaing sessions across the site for session data memory variables. PHP has so much potential I intend to ecxplore int he future like file handeling and mailing system technologies.
+
+					I also learned some frame works like AngularJS and ParticleJS. I used angular for routing and front end data processing, effective real-time inut output procesing and MVCs MOdel-View-Conrollers. I intend to also use it for form validation to make access to databases more secure. I used ParicleJS for particle effects along side the JSON configuration file I talked about earlier.
+				</project_details>
+			</project>
+			<project>
+				<project_title>Web design to development process</project_title>
+				<project_details>
+					I learned HTML and CSS to a high degree and a little of JAvacript because I didn't think it would serve the purpose of making the website. HTML and CSS did serve the intended purpose but there was still potential and because of mycreative instinct, I wanted to learn more, hence this site.
+
+					BAck then, I would learn all the tips and tricks for creating the best site you can ith just TML and CSS. I ould make different file for everything but no matter how hard I try I could only achieve so much and for a self taught person I was retty good. I knew at this point I would have to know JAva Script. I took the tutorial on Javascript again and again but did not get why I would need it until I decided to start making functional web applications.
+
+					At this stage I watched a tutorial on Microsoft MVC framework with ASP.NET and with a little bit of C#. I got facinated with the idea of having a webiste do something as opposd to just aesthetics displaying information. IT would be an application in your phone onlly that you would need to acces it through a browser. This got me thinking how to make this but I couldn't go forward until my foom mate showed me a line of one of his code with ASP and C# but because I want to expand my base not just on Windows and Microsoft I have to generalize so I decided to learn Javacrip but thi time with functionality and potential in mind. Which I did and then moved on to Bootstrap. Watched hundreds of videos on these technologies with my free time in the summer and watch some movies here and there, skip my friends dinner invitations because of this. I do regret this however. But all in good faith. (At least today I made an effort ot visit one of them and took a break from this, it was good).
+
+					Back to my projects I implemented an MVC for routing using microsoft IIS server, well because I ahd a microsoft computer. This was really hard to so because I had little server experience and I needed to use PHP which is a nightmare for HP users so I ditched it and went to download Apache server and had to do configurations which helped with learning diffferent network technologies. Now I am using WAMP to host across devices.
+				</project_details>
+			</project>
+		</projects>
+	</kome>
+</site>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Guys</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	    <meta name="description" content="Demo project">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Calligraffitti" />
+		<style>.calligraffitti {font-family: "Calligraffitti", Sans-serif; font-size: 19px;}</style>
+		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="https://www.w3schools.com/lib/w3.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#sidebar").hide();
+				$("#nav-elem").hide();
+			    $( "#datepicker" ).datepicker();
+			    $("#sidebaropener").click(function(){
+			    	$("#sidebar").toggle(function(){
+			    		$('#sidebarimage').toggle();
+			    	});
+			    });
+			    $(".hovercard").hover(function(){
+			    	$(this).addClass('w3-card-4 w3-round-large animated bounce');
+			    }).mouseleave(function(){
+			    	$(this).removeClass('w3-card-4 w3-round-large');
+			    });
+			    $("#nav-more").click(function(){
+			    	$("#nav-elem").toggle(function(){
+			    		var navelem = document.getElementById("nav-elem");
+				    	if (navelem.style.visibility != "block") {
+				    		document.getElementById("nav-more").innerHTML = 
+				    		'<strong>Hide <span class="glyphicon glyphicon-option-vertical"></span></strong>';
+				    	}
+				    	else
+				    	{
+				    		console.log("here");
+				    		document.getElementById("nav-more").innerHTML = 
+				    		'<strong>More <span class="glyphicon glyphicon-option-vertical"></span></strong>';
+				    	}
+			    	});
+			    });
+			    $("#footer").load("footer.php");
+			});
+		</script>
+		<script>
+			var app = angular.module("myApp", ["ngRoute"]);
+
+			app.controller('personCtrl', function($scope){//, $location) {
+			    $scope.firstName = "Kome";
+			    $scope.lastName = "Michael";
+			    $scope.fullName = function() {
+			        return $scope.firstName + " " + $scope.lastName;
+			    };
+			    // $scope.myURL = $location.absUrl();
+			});
+
+			app.controller('login', function($scope){
+				$scope.date = "today";
+			});
+
+			
+
+			app.config(function($routeProvider){
+				$routeProvider
+				.when('/kome',{
+					templateUrl : "kome.html",
+					controller : "komeCtrl"
+				})
+				.when('/jeremys',{
+					templateUrl : "jeremys.html",
+					controller : "jeremysCtrl"
+				})
+				.when('/alex', {
+					templateUrl : "alex.html",
+					controller : "alexCtrl"
+				})
+				.when('/jeremyd', {
+					templateUrl : "jeremyd.html",
+					controller : "jeremydCtrl"
+				})
+				.when('/hans', {
+					templateUrl : "hans.html",
+					controller : "hansCtrl"
+				})
+				.when('/mark', {
+					templateUrl : "mark.html",
+					controller : "markCtrl"
+				});
+			});
+
+			app.controller('komeCtrl', function($scope) {
+			    $scope.msg = "Kome Michaelangelo";
+			});	
+			app.controller('jeremysCtrl', function($scope) {
+			    $scope.msg = "Jeremy Smith";
+			});
+			app.controller('alexCtrl', function($scope) {
+			    $scope.msg = "Alex Wilke";
+			});
+			app.controller('jeremydCtrl', function($scope) {
+			    $scope.msg = "Jeremy Dyck";
+			});
+			app.controller('hansCtrl', function($scope) {
+			    $scope.msg = "Hans Mariolle";
+			});
+			app.controller('markCtrl', function($scope) {
+			    $scope.msg = "Mark Van-Egmond";
+			});
+
+			
+		</script>
+		<script type="text/javascript">
+			particlesJS.load('particles-js', 'particles.json', function() {
+  				console.log('callback - particles.js config loaded');
+			});
+		</script>
+	</head>
+
+	<body ng-app="myApp">
+		<!-- HEADER of Document -->
+		<div class="w3-top w3-padding w3-grey w3-card-4">
+			<header  id="">
+				<nav >
+					<div class="w3-bar">
+					  <a href="#" id="sidebaropener" class="w3-bar-item w3-button w3-hover-shadow">
+					  	<strong><span class="glyphicon glyphicon-menu-hamburger"></span></strong>
+					  </a>
+					  <a href="#!kome" class="w3-bar-item w3-button w3-hover-shadow" onclick="guy()">
+					  	<span class="w3-hide-small"><strong>Kome</strong></span>
+					  	<span class="w3-hide-medium w3-hide-large" ><img src="images/kome.jpg" style=" height:30px; width: 40px"></span>
+					  </a>
+					  <a href="#!jeremys" class="w3-bar-item w3-button w3-hover-shadow" onclick="guy()">
+					  	<span class="w3-hide-small"><strong>Jeremy</strong></span>
+					  	<span class="w3-hide-medium w3-hide-large" ><img src="images/jeremys.jpg" style=" height:30px; width: 40px"></span>
+					  </a>
+					  <div id="nav-elem">
+						  <a href="#!alex" class="w3-bar-item w3-button w3-hover-shadow" id="nav-elem" onclick="guy()">
+						  	<span class="w3-hide-small"><strong>Alex</strong></span>
+						  	<span class="w3-hide-medium w3-hide-large" ><img src="images/alex.jpg" style=" height:30px; width: 40px"></span>
+						  </a>
+						  <a href="#!hans" class="w3-bar-item w3-button w3-hover-shadow" onclick="guy()">
+						  	<span class="w3-hide-small"><strong>Hans</strong></span>
+						  	<span class="w3-hide-medium w3-hide-large" ><img src="images/hans.jpg" style=" height:30px; width: 40px"></span>
+						  </a>
+						  <a href="#!jeremyd" class="w3-bar-item w3-button w3-hover-shadow" onclick="guy()">
+						  	<span class="w3-hide-small"><strong>JeremyD</strong></span>
+						  	<span class="w3-hide-medium w3-hide-large" ><img src="images/jeremyd.jpg" style=" height:30px; width: 40px"></span>
+						  </a>
+						  <a href="#!mark" class="w3-bar-item w3-button w3-hover-shadow" onclick="guy()">
+						  	<span class="w3-hide-small"><strong>Mark</strong></span>
+						  	<span class="w3-hide-medium w3-hide-large" ><img src="images/kome.jpg" style=" height:30px; width: 40px"></span>
+						  </a>
+						</div>
+					  <a href="#" class="w3-bar-item w3-button w3-hover-shadow" id="nav-more" ">
+					  	<strong>More <span class="glyphicon glyphicon-option-vertical"></span></strong>
+					  </a>
+
+					  <div class="w3-right">
+					  	<a href="logon.php" class="w3-bar-item w3-button w3-hover-shadow">
+					  		<span class="glyphicon glyphicon-user"></span>
+					  	</a>
+					  	<div style="display: inline-block;" class="w3-hide-small">
+					  		<input type="text" class="w3-round" >
+					  	</div>
+					  	<a href="#" class="w3-bar-item w3-button w3-hover-shadow">
+					  		<span class="glyphicon glyphicon-search"></span>
+					  	</a>
+					  </div>
+					</div>
+				</nav>
+
+				<div class="w3-modal">
+					<div class="w3-modal-content w3-animate-zoom w3-card-4">
+						
+					</div>
+				</div>
+			</header>	
+		</div>	
+
+		<!-- body  -->
+		<div id="particles-js" class="w3-sand"  style="padding-top: 70px">
+			<h1 class="w3-xxlarge w3-text-white ">
+				<span class= "w3-round w3-padding w3-black w3-opacity-min"><b>SILVERSTONE</b></span> 
+				<span class="w3-hide-small w3-text-blue-grey">GuysHouse</span>
+			</h1>
+
+			<!-- Sidebar -->
+			<div style="padding: 50px">
+
+				<!-- BODY of Document -->
+				<div class="w3-row w3-flat-asbestos w3-round">
+					<!-- Side bar -->
+					<div class=" w3-col m3 l2">
+						<div class=" w3-containter">
+							<div class="w3-col s3 m2 l2" >  
+								<div class="w3-containter w3-hide-small w3-padding w3-col s3 m2 l2" id="sidebarimage" >
+									<img src="images/silverstone.jpg" class="w3-round" style="height: 500px; width: 100%">
+								</div>   
+					            <div class="w3-containter w3-col s3 m2 l2">
+					            	<span>...</span>
+					            	<div  id="sidebar" class="w3-sidebar w3-bar-block w3-round w3-dark-grey" style="height: 500px;">  
+						            	<a href="index.php" class="w3-bar-item w3-button w3-hover-sand w3-hover-shadow w3-margin-bottom w3-center " >
+						            		<strong>Home</strong>
+						            	</a>
+										<a href="about.php" class="w3-bar-item w3-button w3-hover-sand w3-margin-bottom w3-hover-shadow w3-center">
+						            		<strong>About</strong>
+						            	</a>
+						              	<a href="bookings.php" class="w3-bar-item w3-button w3-hover-sand w3-margin-bottom w3-hover-shadow w3-center">
+						            		<strong>Booking</strong>
+						            	</a>
+						              	<a href="ivcf.php" class="w3-bar-item w3-button w3-hover-sand w3-margin-bottom w3-hover-shadow w3-center">
+						            		<strong>IVCF</strong>
+						            	</a>
+						              	<a href="gallery.php" class="w3-bar-item w3-button w3-hover-sand w3-margin-bottom w3-hover-shadow w3-center">
+						            		<strong>Gallery</strong>
+						            	</a> 
+						            	<a href="loggedin.php" class="w3-bar-item w3-button w3-hover-sand w3-margin-bottom w3-hover-shadow w3-center">
+						            		<strong>LogIn test</strong>
+						            	</a>
+						            </div>
+					            </div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Body of the body -->
+					<div class="w3-col m6 l7 w3-padding calligraffitti w3-text-sand">
+						<h1>GUYS</h1>
+						<div class="hovercard"><ng-view> Guy </ng-view></div>
+						<br>
+						<button class="w3-button w3-dark-grey w3-bar w3-round" onclick="loadmore();"><strong>Load More</strong></button>
+						<hr>
+						<div id="person" class="w3-padding hovercard"></div>
+					</div>
+					
+
+					<div class=" w3-col m3 l3 w3-hide-small">
+						<div style="padding: 16px" class="w3-containter w3-text-sand">
+							<div class="w3-card-4 w3-margin-bottom w3-round">
+								<h2 class="w3-containter w3-center w3-dark-grey w3-padding w3-round w3-text-sand">Updates</h2>
+							</div>
+							<div class="w3-card-4 w3-margin-bottom w3-round">
+								<header class="w3-containter w3-center w3-dark-grey w3-padding w3-round w3-text-sand">
+									<h3 id="header1">Lorem</h3>
+								</header>
+								<p id="news1" class="w3-padding">
+									<i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi .</i>
+								</p>
+							</div>
+							<br>
+							<div class="w3-card-4 w3-margin-bottom w3-round">
+								<header class="w3-containter w3-center w3-dark-grey w3-padding w3-round w3-text-sand">
+									<h3 id="header2">Ipsum</h3>
+								</header>
+								<p class="w3-padding" id="news2">
+									<i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labor magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laisi .</i>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- FOOTER of Document -->
+		<div id="footer"></div>
+	</body>
+</html>
+<script type="text/javascript">
+	function loadmore()
+	{
+		guy();
+	}
+
+
+	function guy()
+	{
+		var stringhref = window.location.href;
+
+		string = stringhref.split("#!/")[1];
+
+		if (string) {
+			console.log(string);
+			xmlo(string);
+		}
+		else
+		{
+			string = stringhref.split("#!")[1];
+			console.log(string);
+			xmlo(string);
+		}
+		
+	}
+
+
+	function xmlo(guy){
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			var html;
+		    if (this.readyState == 4 && this.status == 200) {
+		      thisfunction(this, guy);
+		    }
+		};
+		xhttp.open("GET", "sites.xml", true);
+		xhttp.send();
+
+		function thisfunction(xml, guy){
+
+			var xmldoc = xml.responseXML;
+			var inhtml = "<div  class='hovercard w3-padding'><h3 class='w3-text-dark-grey'>";
+			var guy = xmldoc.getElementsByTagName(guy)[0];
+			var avatarKome = guy.getElementsByTagName("avatar")[0].childNodes[0].nodeValue;
+			var quoteKome = guy.getElementsByTagName("Quote")[0].childNodes[0].nodeValue;
+
+			inhtml += quoteKome + "</h3>";
+
+			var guyprojects = guy.getElementsByTagName("projects")[0].childNodes;
+
+			for (var i = 0; i < guyprojects.length; i++) {
+				if (!(guyprojects[i].nodeType == 3)) {
+					var project_title = guyprojects[i].getElementsByTagName("project_title")[0].childNodes[0].nodeValue;
+					var project_details = guyprojects[i].getElementsByTagName("project_details")[0].childNodes[0].nodeValue;
+					inhtml += "<h3 class='w3-text-sand'>" + project_title + "</h3><br>";
+					inhtml += "<p class='w3-padding'>" + project_details+ "</p><br><hr><br>";
+				}
+			}
+
+			inhtml += "</div>";
+			document.getElementById("person").innerHTML = inhtml;
+		}
+	}
+</script>
+<script src="xmlfunc.js"></script>
